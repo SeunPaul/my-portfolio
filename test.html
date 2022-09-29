@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<style type="text/css">
+		body{
+			background-color: #e4e4e4;
+		}
+		.clock{
+			position: fixed;
+			top: 50%;
+			right: 0px;
+			transform: translateY(-50%);
+			height: 300px;
+			width: 300px;
+			background-color: grey;
+			border-radius: 50%;
+		}
+		.long{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -100%);
+			width: 2px;
+			height: 100px;
+			background-color: red;
+			transform-origin: 100% 100%;
+		}
+		.point{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -100%);
+			width: 2px;
+			height: 50%;
+			transform-origin: 100% 100%;
+		}
+		.point span{
+			position: absolute;
+			transform: translateX(-50%);
+		}
+		.one{
+			transform: translate(-50%, -100%) rotate(30deg);
+		}
+		.one span{
+			transform: translateX(-50%) rotate(-30deg);
+		}
+		.two{
+			transform: translate(-50%, -100%) rotate(60deg);
+		}
+		.two span{
+			transform: translateX(-50%) rotate(-60deg);
+		}
+		.three{
+			transform: translate(-50%, -100%) rotate(90deg);
+		}
+		.three span{
+			transform: translateX(-50%) rotate(-90deg);
+		}
+		.four{
+			transform: translate(-50%, -100%) rotate(120deg);
+		}
+		.four span{
+			transform: translateX(-50%) rotate(-120deg);
+		}
+		.five{
+			transform: translate(-50%, -100%) rotate(150deg);
+		}
+		.five span{
+			transform: translateX(-50%) rotate(-150deg);
+		}
+		.six{
+			transform: translate(-50%, -100%) rotate(180deg);
+		}
+		.six span{
+			transform: translateX(-50%) rotate(-180deg);
+		}
+		.seven{
+			transform: translate(-50%, -100%) rotate(210deg);
+		}
+		.seven span{
+			transform: translateX(-50%) rotate(-210deg);
+		}
+		.eight{
+			transform: translate(-50%, -100%) rotate(240deg);
+		}
+		.eight span{
+			transform: translateX(-50%) rotate(-240deg);
+		}
+		.nine{
+			transform: translate(-50%, -100%) rotate(270deg);
+		}
+		.nine span{
+			transform: translateX(-50%) rotate(-270deg);
+		}
+		.ten{
+			transform: translate(-50%, -100%) rotate(300deg);
+		}
+		.ten span{
+			transform: translateX(-50%) rotate(-300deg);
+		}
+		.eleven{
+			transform: translate(-50%, -100%) rotate(330deg);
+		}
+		.eleven span{
+			transform: translateX(-50%) rotate(-330deg);
+		}
+
+		/*ying and yang*/
+		.yinyang{
+			position: fixed;
+			top: 20%;
+			left: 10%;
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			box-shadow: 2px 2px 30px #545454;
+			display: flex;
+			overflow: hidden;
+			animation: yingyang linear infinite 3s
+		}
+		.yinyang .left{
+			background-color: white;
+			height: 100%;
+			width: 50%;
+			display: inline-block;
+		}
+		.yinyang .right{
+			background-color: black;
+			height: 100%;
+			width: 50%;
+		}
+		.top, .bottom{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.top span, .bottom span{
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+		}
+		.top span{
+			background-color: black;
+		}
+		.bottom span{
+			background-color: white;
+		}
+		.top{
+			background-color: white;
+			z-index: 2;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		.bottom{
+			background-color: black;
+			z-index: 2;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		@keyframes yingyang{
+			from{
+				transform: rotate(0deg);
+			}
+			to{
+				transform: rotate(360deg);
+			}
+		}
+
+		/*universe of madness*/
+		.universe{
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-image: radial-gradient(circle, #c4c4c4, #efefef, #fff);
+			box-shadow: 2px 2px 50px #949494;
+			height: 505px;
+			width: 505px;
+			border-radius: 50%;
+		}
+		.universe-x{
+			position: absolute;
+			border: 3px solid grey;
+			border-radius: 50%;
+			height: 500px;
+			width: 500px;
+			transform: rotate3d(1, 0, 0, 65deg);
+		}
+		.universe-y{
+			position: absolute;
+			border: 3px solid grey;
+			border-radius: 50%;
+			height: 500px;
+			width: 500px;
+			transform: rotate3d(0, 1, 0, 65deg);
+		}
+		.universe-z{
+			position: absolute;
+			border: 3px solid grey;
+			border-radius: 50%;
+			height: 500px;
+			width: 500px;
+			transform: rotate3d(3, 2, 1, 65deg);
+		}
+		.universe-p{
+			position: absolute;
+			border: 3px solid grey;
+			border-radius: 50%;
+			height: 500px;
+			width: 500px;
+			transform: rotate3d(-1.5, 2, 1, 65deg);
+		}
+		.dot-line{
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 50%;
+			width: 2px;
+			transform-origin: 50% 100%;
+			animation: dot linear infinite 20s
+		}
+		.dot{
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background-color: #fff;
+			border: 1px dashed #000;
+			transform: translate(-50%, -50%);
+		}
+		@keyframes dot{
+			from{
+				transform: rotate(0deg);
+			}
+			to{
+				transform: rotate(360deg);
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="clock">
+		<div>
+			<div class="point twelve"><span>12</span></div>
+			<div class="point one"><span>1</span></div>
+			<div class="point two"><span>2</span></div>
+			<div class="point three"><span>3</span></div>
+			<div class="point four"><span>4</span></div>
+			<div class="point five"><span>5</span></div>
+			<div class="point six"><span>6</span></div>
+			<div class="point seven"><span>7</span></div>
+			<div class="point eight"><span>8</span></div>
+			<div class="point nine"><span>9</span></div>
+			<div class="point ten"><span>10</span></div>
+			<div class="point eleven"><span>11</span></div>
+		</div>
+		<div class="long"></div>
+	</div>
+	<div class="yinyang">
+		<div class="top"><span></span></div>
+		<div class="bottom"><span></span></div>
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+	<div class="universe">
+		<div class="universe-x">
+			<div class="dot-line">
+				<div class="dot"></div>
+			</div>
+		</div>
+		<div class="universe-y">
+			<div class="dot-line">
+				<div class="dot"></div>
+			</div>
+		</div>
+		<div class="universe-z">
+			<div class="dot-line">
+				<div class="dot"></div>
+			</div>
+		</div>
+		<div class="universe-p">
+			<div class="dot-line">
+				<div class="dot"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
