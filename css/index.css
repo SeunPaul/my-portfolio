@@ -29,7 +29,7 @@
   outline: none;
   border-radius: 10px;
   height: 50px;
-  width: 170px;
+  width: 150px;
   font-size: 16px;
   font-family: monospace;
   box-shadow: 2px 2px 8px #d4d4d4;
@@ -136,7 +136,8 @@
     padding: 0px 20px;
   }
   .hero-left {
-    width: 100%;
+    width: 250px;
+    align-items: flex-start;
   }
   .hero-left-content p {
     font-size: 18px;
@@ -150,19 +151,21 @@
     right: 0;
     bottom: 0;
     left: 0;
-    /* background-color: rgba(244, 244, 244, 0.5); */
     background-color: rgba(244, 244, 244, 0.5);
   }
 }
 
 @media (max-width: 24rem) {
   .hero-left-content h1 {
-    font-size: 40px;
+    font-size: 35px;
+  }
+  .hero-left-content p {
+    font-size: 14px;
   }
 }
 
 @media (max-width: 23rem) {
   .hero-left-content h1 {
-    font-size: 37px;
+    font-size: 30px;
   }
 }

@@ -12,7 +12,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   padding: 30px 50px;
-  background-color: #f4f4f4;
+  background-color: #e4e4e4;
 }
 
 .active-nav {
@@ -38,13 +38,18 @@ nav li {
   list-style: none;
 }
 
-#particles-js {
+#particles-js,
+#full-particles-js {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: -1;
+}
+
+#full-particles-js {
+  display: none;
 }
 
 .animate-delayed-1 {
@@ -85,6 +90,12 @@ nav li {
   }
   nav div {
     width: 100%;
+  }
+  #particles-js {
+    display: none;
+  }
+  #full-particles-js {
+    display: block;
   }
 }
 
