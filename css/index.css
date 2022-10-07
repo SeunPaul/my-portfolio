@@ -1,0 +1,168 @@
+.home {
+  position: relative;
+  display: flex;
+  padding: 0px 100px;
+  overflow: hidden;
+}
+
+.hero-left {
+  width: 45%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-left-content h1 {
+  font-size: 47px;
+  color: #3d3d3d;
+}
+
+.hero-left-content p {
+  font-size: 18px;
+  color: #3d3d3d;
+}
+
+.hero-left-content button {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 170px;
+  font-size: 16px;
+  font-family: monospace;
+  box-shadow: 2px 2px 8px #d4d4d4;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(3px);
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.hero-left-content button:hover {
+  box-shadow: 1px 1px 18px #d4d4d4;
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.social-icon {
+  width: 25px;
+  margin-right: 15px;
+}
+
+.hero-img {
+  width: 40%;
+  height: 100vh;
+  background-image: url("../assets/seun.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 80rem) {
+  .home {
+    padding: 0px 40px;
+  }
+}
+
+@media (max-width: 70rem) {
+  .hero-left {
+    width: 50%;
+  }
+  .hero-img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 65rem) {
+  .hero-img {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+/* set for Ipad pro */
+@media (max-height: 86rem) {
+  .hero-img {
+    width: 70%;
+  }
+}
+
+/* reset */
+@media (max-height: 84rem) {
+  .hero-img {
+    width: 50%;
+  }
+}
+
+/* set for Ipad pro */
+@media (max-height: 65rem) {
+  .hero-img {
+    width: 70%;
+  }
+}
+
+/* reset */
+@media (max-height: 63rem) {
+  .hero-img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 60rem) {
+  .hero-img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 50rem) {
+  .hero-img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 40rem) {
+  .hero-left {
+    width: 70%;
+  }
+}
+
+@media (max-width: 26rem) {
+  .home {
+    padding: 0px 20px;
+  }
+  .hero-left {
+    width: 100%;
+  }
+  .hero-left-content p {
+    font-size: 18px;
+  }
+  .hero-img {
+    width: 100%;
+  }
+  .hero-img-blur-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background-color: rgba(244, 244, 244, 0.5); */
+    background-color: rgba(244, 244, 244, 0.5);
+  }
+}
+
+@media (max-width: 24rem) {
+  .hero-left-content h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 23rem) {
+  .hero-left-content h1 {
+    font-size: 37px;
+  }
+}
